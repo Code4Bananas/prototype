@@ -2,7 +2,7 @@
 // This data is shared across all templates:
 {
   // To access this data in a view, you'd write:
-  // {{ shared.somedata }}
+  {{ shared.somedata }}
   "somedata": "somevalue",
   "builtWith": "Salesforce Lightning Design System Starter Kit"
 }
