@@ -52,6 +52,24 @@ Array.from(dropdownButtons)
  * https://www.lightningdesignsystem.com/components/tabs/
  */
 
+.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
+
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider.state('home', {
+    url: "/home",
+    templateUrl: "templates/home.html",
+    controller: 'HomeCtrl'
+  })
+
+  .state('register', {
+    url: "/register",
+    templateUrl: "templates/register.html",
+    controller: 'RegisterCtrl'
+  })
+
 const tabs = (variant) => document.querySelectorAll(`.slds-tabs--${variant} [role=tablist] [role=tab]`)
 const tabActiveReset = (tab) => Array.from(tab.parentNode.parentNode.querySelectorAll('li'))
   .forEach((element) => element.classList.remove('slds-active'))
