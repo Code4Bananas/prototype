@@ -66,9 +66,16 @@ Array.from(dropdownButtons)
 
   .state('register', {
     url: "/register",
-    templateUrl: "templates/register.html",
+    templateUrl: "views/register.html",
     controller: 'RegisterCtrl'
   })
+  
+   .state('login', {
+    url: "/login",
+    templateUrl: "templates/login.html",
+    controller: 'LoginCtrl'
+  })
+  
 
 const tabs = (variant) => document.querySelectorAll(`.slds-tabs--${variant} [role=tablist] [role=tab]`)
 const tabActiveReset = (tab) => Array.from(tab.parentNode.parentNode.querySelectorAll('li'))
